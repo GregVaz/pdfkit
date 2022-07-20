@@ -41,7 +41,7 @@ class PDFKit
     end
 
     def url_needs_escaping?
-      URI::decode(@source) == @source
+      URI::encode_www_form_component(@source) == @source
     end
   end
 end
